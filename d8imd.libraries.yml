@@ -1,0 +1,8 @@
+global-styling:
+  version: VERSION
+  css:
+    base:
+      css/d8imd.css: {}
+  js:
+    js/d8imd.js: {}
+

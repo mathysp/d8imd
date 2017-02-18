@@ -1,0 +1,120 @@
+####
+# REQUIRED VALUES
+####
+
+name: D8IMD
+#> The human-readable name. This will appear on the "Appearance" page where the theme is activated.
+
+type: theme
+#> Indicates the type of extension, i.e., "module", "theme", or "profile". For themes this should always be set to "theme".
+
+description: 'A base theme based on Classy. Learn how to use Classy as a base theme in the <a href="https://www.drupal.org/theme-guide/8">Drupal 8 Theming Guide</a>.'
+#> The description, displayed on the "Appearance" page.
+
+core: 8.x
+#> Specifies the version of Drupal core that the theme is compatible with.
+
+####
+# RECOMMENDED VALUES
+####
+
+base theme: classy
+#> A theme can inherit the resources from another theme by specifying it as a base theme.
+#> It is recommended to use classy or stable (stable is the default if the key is not supplied) – this makes it easier for your theme to inherit future changes in core theming.
+
+####
+# OPTIONAL VALUES
+####
+
+libraries:
+  - core/normalize
+  - d8imd/global-styling
+#> A list of libraries (which can contain both CSS and JavaScript assets) to add to all pages where the theme is active.
+#> Read more: https://www.drupal.org/node/2216195
+
+regions:
+# machine_name: String
+#               ^-> 'Gebruik quotes bij een naam van meerdere woorden'
+  header: Header
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  breadcrumb: Breadcrumb
+  highlighted: Highlgihted
+  imd: 'IMD region'
+  help: Help
+  content: Content
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer: Footer
+
+#> A list of theme regions. (Note that region keys are not preceded by a dash.)
+#> A content region is required.
+#> Read more about adding regions to a theme: https://www.drupal.org/node/2469113
+
+
+##################################
+#
+# For more info see
+#  - https://www.drupal.org/docs/8/theming-drupal-8/defining-a-theme-with-an-infoyml-file
+#
+# Good to know items
+#
+# Format:
+# # key: value
+# #> description
+#
+##################################
+
+# package: <name>
+#> Specifies a "package" that allows you to group themes together.
+
+# php: 7.0.2
+#> The minimum version of PHP required. Defaults to value of DRUPAL_MINIMUM_PHP constant.
+
+# version: 8.x-1.0
+#> Specifies a version. For themes hosted on drupal.org, the version number will be filled in by the packaging script. Do not specify it manually, but leave out the version line entirely.
+
+# libraries-override
+#> A collection of libraries and assets to override. Read more at Overriding and extending libraries: https://www.drupal.org/node/2216195#override-extend
+
+# hidden: true
+#> Indicates whether or not to hide the theme from the "Appearance" page so that it cannot be enabled/disabled via the UI.
+
+# engine: twig
+#> The theme engine. Defaults to "twig".
+
+# screenshot: fluffiness.png
+#> The path to screenshot relative to the theme's .info.yml file. Screenshots should be 588 pixels wide and 438 pixels high, though they are displayed at a smaller size. By default, Drupal will look for a file named "screenshot.png" in the root of your theme folder and use that as the theme image on the "Appearance" page.
+
+# regions_hidden: -sidebar_last
+#> A list of inherited regions to remove.
+
+# features: -favicon
+#> A list of features to expose on the theme "Settings" page.
+
+
+# ckeditor_stylesheets:
+# - css/base/elements.css
+# - https://fonts.googleapis.com/css?family=Open+Sans
+#> A list of stylesheets to add to the CKEditor frame.
+
+
+
+##################################
+#
+# I would advise you not to use the options below.
+# it is better to use libraries.
+#
+##################################
+
+# stylesheets
+#> A list of stylesheets to add to all pages where the theme is active.
+
+# stylesheets-remove:
+#> A list of stylesheets from other modules or themes to remove from all pages where the theme is active. Each value must be a full path relative to the docroot to resolve ambiguity when more than one file with the same name exists. In cases where the file is part of a library that belongs to a module or theme, a token in the form @module_or_theme_name can be used in place of the full path. Note that when using the token the value must be quoted because "@" is a reserved indicator in YAML. Note: This key is deprecated and will be removed in Drupal 9. In most cases libraries-override should be used.
+
+# scripts
+#> A list of theme scripts to add to all pages where the theme is active.
+
+
+
