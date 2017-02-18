@@ -34,7 +34,7 @@ libraries:
 
 regions:
 # machine_name: String
-#               ^-> 'Gebruik quotes bij een naam van meerdere woorden'
+#               ^-> 'Use single quotes for a name containing spaces'
   header: Header
   primary_menu: 'Primary menu'
   secondary_menu: 'Secondary menu'
