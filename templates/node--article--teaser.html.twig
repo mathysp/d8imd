@@ -80,8 +80,12 @@
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
   ]
 %}
+
+
+
 {{ attach_library('classy/node') }}
-<article{{ attributes.addClass(classes) }}>
+<article{{ attributes.addClass(classes) }} style="background-image: url('{{ file_url(content.field_image['#items'].entity.uri.value) }}');background-size:cover;">
+
 
   {{ title_prefix }}
   {% if not page %}
@@ -101,8 +105,9 @@
     </footer>
   {% endif %}
 
+
   <div{{ content_attributes.addClass('node__content') }}>
-    {{ content }}
+    {{ content|without('field_image') }}
   </div>
 
 </article>

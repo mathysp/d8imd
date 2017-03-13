@@ -1,8 +1,24 @@
 global-styling:
-  version: VERSION
+  version: 1.x
   css:
     base:
-      css/d8imd.css: {}
+      css/base/base.css: {}
+      css/base/elements.css: {}
+    layout:
+      css/layout/layout.css: {}
+    component:
+      css/components/node-article.css: {}
   js:
     js/d8imd.js: {}
+    dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
 
+
+
+masonry:
+  version: 1.x
+  js:
+    /libraries/masonry/masonry.pkgd.min.js: {}
+    js/masonry.js: {}

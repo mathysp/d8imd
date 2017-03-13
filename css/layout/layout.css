@@ -1,0 +1,25 @@
+.layout-container {
+  padding: 30px;
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.layout-sidebar-first {
+  float: left;
+  width: 100%;
+}
+
+
+.view-frontpage .views-row {
+  width: 100%;
+  float: left;
+}
+
+@media screen and (min-width: 768px) {
+  .view-frontpage .views-row {
+    width: 50%;
+  }
+  .view-frontpage .views-row:nth-of-type(2n+1) {
+    clear: left;
+  }
+}

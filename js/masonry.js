@@ -8,10 +8,13 @@
   /**
    * Example drupal behavior
    */
-  Drupal.behaviors.awesome = {
+  Drupal.behaviors.masonry = {
     attach: function (context, settings) {
-      $('main', context).once('awesome').each(function () {
-        alert('I\'m helping!');
+      $('.view-frontpage .view-content', context).once('masonry').each(function () {
+        $(this).masonry({
+          columnWidth: 200,
+          itemSelector: '.views-row'
+        });
       });
     }
   };

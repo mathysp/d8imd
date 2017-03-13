@@ -40,7 +40,6 @@ regions:
   secondary_menu: 'Secondary menu'
   breadcrumb: Breadcrumb
   highlighted: Highlgihted
-  imd: 'IMD region'
   help: Help
   content: Content
   sidebar_first: 'Sidebar first'

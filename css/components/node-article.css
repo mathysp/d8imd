@@ -1,0 +1,8 @@
+.node--type-article {
+
+}
+
+
+.node--type-article.node--view-mode-teaser {
+  padding: 15px;
+}
